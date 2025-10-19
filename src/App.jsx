@@ -11,13 +11,11 @@ export default function App() {
         <BrowserRouter>
     <div className='flex w-full flex-col bg-gray-200/5'>
         <Routes>
-            
             <Route element={<Layout/>}>
-            <Route path='/dashboard' element={<Dashboard/>}/>
             <Route path='/login' element={<Login/>}/>
-            {/* <div className='ml-72 mt-20'> */}
+
+            <Route path='/' element={<Dashboard/>}/>
             <Route path='/home' element={<Home/>}/>
-            {/* </div> */}
             </Route>
         </Routes>
     </div>
