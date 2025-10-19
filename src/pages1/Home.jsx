@@ -1,5 +1,4 @@
-import React from "react";
-import pic from "../assets/first_edit-removebg-preview.png";
+// import pic from "../assets/first_edit-removebg-preview.png";
 import Button from "../comps/Button";
 
 export default function Home() {

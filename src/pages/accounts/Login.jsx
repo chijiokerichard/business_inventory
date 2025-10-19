@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import { DataWrapper } from '../../../../store/context'
 import Button from "../../component/atom/Button"
 import { useNavigate } from 'react-router-dom'

@@ -8,7 +8,7 @@ import { DataWrapper } from "../../../store/context";
 import CreateAccount from "./accounts/CreateAccount";
 export default function App() {
  
-  const [isLogin,setIsLogin] = useState(false)
+  // const [isLogin,setIsLogin] = useState(false)
   const [userInfo, setUserInfo] = useState();
   console.log(userInfo)
   const arr = [1,2,3]
