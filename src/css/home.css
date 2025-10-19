@@ -1,0 +1,15 @@
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.home h1{
+    font-size: 4rem;
+}
+
+.home img{
+    width: 500px;
+    height: 500px;
+}
