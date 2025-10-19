@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ".././index.css"
 import "../css/navbar.css"
-import { DataWrapper } from '../../../store/context'
+import { DataWrapper } from '../../context'
 import Button from "../component/atom/Button"
 
 export default function Navbar() {

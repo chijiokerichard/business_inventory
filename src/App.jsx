@@ -15,7 +15,9 @@ export default function App() {
             <Route element={<Layout/>}>
             <Route path='/dashboard' element={<Dashboard/>}/>
             <Route path='/login' element={<Login/>}/>
+            <div className='ml-72 mt-20'>
             <Route path='/home' element={<Home/>}/>
+            </div>
             </Route>
         </Routes>
     </div>

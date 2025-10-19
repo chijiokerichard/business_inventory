@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "../component/Navbar";
 import { useState} from "react";
 import Login from "./accounts/Login";
-import { DataWrapper } from "../../../store/context";
+import { DataWrapper } from "../../context";
 import CreateAccount from "./accounts/CreateAccount";
 export default function App() {
  

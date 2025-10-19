@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react'
-import { DataWrapper } from '../../../../store/context'
+import { DataWrapper } from '../../../context'
 import Button from "../../component/atom/Button"
 import { useNavigate } from 'react-router-dom'
 
