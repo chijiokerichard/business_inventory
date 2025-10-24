@@ -11,9 +11,6 @@ export default function Navbar() {
     <header className="flex  justify-between py-4 px-7 top-0  fixed ml-70 right-0   left-70 bg-white  items-center h-18">
       <div className="flex  items-center w-full justify-between gap-10">
         <div className="flex items-center gap-3">
-          {/* <h1 className='bg-[#44458e7a]/50 rounded-md  px-5 py-2 text-[#44458e] text-center relative flex items-center justify-center'>
-        level
-        </h1> */}
           <input type="text" className="w-[200px] font-[BitCount_Single] border-none p-1 outline-1 bg-white rounded-md border-[#0a0a2a]" name="" id="" />
         <button className="bg-[#0a0a2a] px-2 py-1 rounded-md text-white font-[Montagu_Slab]">search</button>
         </div>
