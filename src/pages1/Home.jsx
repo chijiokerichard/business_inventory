@@ -1,9 +1,11 @@
 // import pic from "../assets/first_edit-removebg-preview.png";
+import Wrapper from "../component/atom/Wrapper";
 import Button from "../comps/Button";
 
 export default function Home() {
   return (
-    <div className="h-[100vh] overflow-hidden  bg-right   bg-no-repeat bg-contain mr-[2rem]">
+    <Wrapper>
+    {/* <div className="h-[100vh] overflow-hidden mt-[10px] ml-70 bg-right   bg-no-repeat bg-contain mr-[2rem]">
       <div className="flex  h-full items-center justify-between pl-[160px] relative">
         <div className="w-full z-4 flex absolute   h-full justify-center items-center">
             <div className="h-full gap-1 not-first: w-full  flex flex-col justify-center ">
@@ -17,9 +19,13 @@ export default function Home() {
             </div>
         </div>
         <div className="w-[770px] bg-transparent absolute right-0 overflow-hidden z-1  h-full ">
-          <img src={pic} className=" w-full ml-auto  h-full" />
+          <img src="" className=" w-full ml-auto  h-full" />
         </div>
       </div>
+    </div> */}
+    <div className="h-full bg-blue w-full">
+    <h1>Home</h1>
     </div>
+    </Wrapper>
   );
 }
