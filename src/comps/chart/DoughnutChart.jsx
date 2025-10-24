@@ -43,11 +43,12 @@ function LineChart() {
             "#8ca607",
             "rgba(163, 208, 140, 0.3)",
             "#0a0a2a",
-            "#222258",
+            "#252250",
             "#A3D08C",          
             "#e27f46",          
             "#18ec78",          
           ],
+          
           //  borderColor: "#fff",
           // hoverOffset: 10,
             borderColor: "#624", // for wave line
