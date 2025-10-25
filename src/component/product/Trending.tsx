@@ -1,6 +1,9 @@
 import React from 'react'
-
-export default function Trending({img,name}) {
+type Props = {
+    img?: string,
+    name?: string,
+}
+export default function Trending({img,name}:Props) {
   return (
     <div style={{marginTop:"1rem"}} className='flex w-full justify-between items-end'>
         <div className="flex gap-2 items-end">

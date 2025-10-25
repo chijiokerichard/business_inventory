@@ -4,20 +4,13 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { FaProductHunt } from "react-icons/fa6";
 import { MdPointOfSale } from "react-icons/md";
 import { IoAnalyticsSharp } from "react-icons/io5";
-
-
-// import { FaProductHunt } from "react-icons/fa6";
-
-
-
-
-
-import Wrapper from "../component/atom/Wrapper"
-import LineChart from "../comps/chart/LineCart";
-import DoughnutChart from "../comps/chart/DoughnutChart";
-import BarChart from "../comps/chart/BarChart";
 import Trending from "../component/product/Trending";
 import { img } from "../comps/images/images";
+import { Link } from "react-router-dom";
+import BarChart from "../comps/chart/BarChart";
+import LineChart from "../comps/chart/LineCart";
+import Wrapper from "../component/atom/Wrapper";
+import DoughnutChart from "../comps/chart/DoughnutChart";
 
 export default function Dashboard() {
   return (
@@ -41,7 +34,7 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          <div className=" flex [#0a0a2a1] bg-[#F8FAF7] text- shadow-sm rounded-md w-[250px] h-[100px] px-2 py-1">
+          <Link to={"/sales"} className=" flex [#0a0a2a1] bg-[#F8FAF7] text- shadow-sm rounded-md w-[250px] h-[100px] px-2 py-1">
             <div className="w-full font-[Bricolage_Grotesque] flex flex-col justify-between">
               <div className="flex items-center gap-2 justify-start">
                 <MdPointOfSale className="h-7 w-7 [#d3cbee99] bg-[#8ca607] p-1 text-white rounded-md " />
@@ -56,8 +49,8 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className=" flex [#0a0a2a1] bg-[#F8FAF7] text- shadow-sm rounded-md w-[250px] h-[100px] px-2 py-1">
+          </Link>
+          <Link to={"/products"} className=" flex [#0a0a2a1] bg-[#F8FAF7] text- shadow-sm rounded-md w-[250px] h-[100px] px-2 py-1">
             <div className="w-full font-[Bricolage_Grotesque] flex flex-col justify-between">
               <div className="flex items-center gap-2 justify-start">
                 <FaProductHunt className="h-7 w-7 [#d3cbee99] bg-[#8ca607] p-1 text-white rounded-md " />
@@ -72,7 +65,7 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
           <div className=" flex [#0a0a2a1] bg-[#F8FAF7] text- shadow-sm rounded-md w-[250px] h-[100px] px-2 py-1">
             <div className="w-full font-[Bricolage_Grotesque] flex flex-col justify-between">
               <div className="flex items-center gap-2 justify-start">
@@ -110,85 +103,7 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      {/* <div style={{marginTop:"1rem"}} className="mt-3 flex flex-col gap-5">
-        <div className="flex gap-5 justify-between my-5 w-full">
-          <div className=" flex bg-white shadow-md rounded-md w-[200px] h-[70px] px-2 py-1">
-            <div className="w-full font-[Bricolage_Grotesque] flex flex-col justify-between">
-              <h1 className="text-[14px] font-[200] ">Expired products</h1>
-              <div className="flex items-center justify-between w-full">
-              <p className="font-[600] text-xl">30</p>
-                <IoPeople className="h-7 w-7 text-[#44458e]"/>
-
-              </div>
-            </div>
-          </div>
-          <div className=" flex bg-white shadow-md rounded-md w-[200px] h-[70px] px-2 py-1">
-            <div className="w-full font-[Bricolage_Grotesque] flex flex-col justify-between">
-              <h1 className="text-[14px] font-[200] ">Sales Today</h1>
-              <div className="flex items-center justify-between w-full">
-              <p className="font-[600] text-xl">500</p>
-                <FcSalesPerformance className="h-7 w-7 text-[#44458e]"/>
-
-              </div>
-            </div>
-          </div>
-          <div className=" flex bg-white shadow-md rounded-md w-[200px] h-[70px] px-2 py-1">
-            <div className="w-full font-[Bricolage_Grotesque] flex flex-col justify-between">
-              <h1 className="text-[14px] font-[200] ">Total Products</h1>
-              <div className="flex items-center justify-between w-full">
-              <p className="font-[600] text-xl">1000</p>
-                <FaProductHunt className="h-7 w-7 text-[#44458e]"/>
-
-              </div>
-            </div>
-          </div>
-          <div className=" flex bg-white shadow-md rounded-md w-[200px] h-[70px] px-2 py-1">
-            <div className="w-full font-[Bricolage_Grotesque] flex flex-col justify-between">
-              <h1 className="text-[14px] font-[200] ">Total Revenue</h1>
-              <div className="flex items-center justify-between w-full">
-              <p className="font-[600] text-xl">$12000</p>
-                <TbWorldUpload  className="h-7 w-7 text-[#44458e]"/>
-
-              </div>
-            </div>
-          </div>
-          <div className=" flex bg-white shadow-md rounded-md w-[200px] h-[70px] px-2 py-1">
-            <div className="w-full font-[Bricolage_Grotesque] flex flex-col justify-between">
-              <h1 className="text-[14px] font-[200] ">Total Expenses</h1>
-              <div className="flex items-center justify-between w-full">
-              <p className="font-[600] text-xl">$33.5000</p>
-                <IoPeople className="h-7 w-7 text-[#44458e]"/>
-
-              </div>
-            </div>
-          </div>
-          <div className=" flex bg-white shadow-md rounded-md w-[200px] h-[70px] px-2 py-1">
-            <div className="w-full font-[Bricolage_Grotesque] flex flex-col justify-between">
-              <h1 className="text-[14px] font-[200] ">pending Product</h1>
-              <div className="flex items-center justify-between w-full">
-              <p className="font-[600] text-xl">20</p>
-                <IoPeople className="h-7 w-7 text-[#44458e]"/>
-
-              </div>
-            </div>
-          </div>
-         
-        </div>
-        <div className="flex justify-between w-full">
-        <LineChart />
-        <DoughnutChart />
-        </div>
-      </div> */}
-      {/* <div className=" flex bg-[#0a0a2a] text-white shadow-md rounded-md w-[300px] h-[100px] px-2 py-1">
-            <div className="w-full font-[Bricolage_Grotesque] flex flex-col justify-between">
-              <h1 className="text-[15px] font-[200] font-[Montagu_Slab]">Total products</h1>
-              <div className="flex items-center justify-between w-full">
-              <p className="font-[600] text-2xl font-[Bitcount_Single]">1890</p>
-                < FaProductHunt  className="h-7 w-7 text-[#d3cbee]"/>
-
-              </div>
-            </div>
-          </div> */}
+      
     </Wrapper>
 
   );

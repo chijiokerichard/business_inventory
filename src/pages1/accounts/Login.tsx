@@ -1,16 +1,16 @@
-import { useContext, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { DataWrapper } from '../../../context'
-import Button from "../../component/atom/Button"
 import { useNavigate } from 'react-router-dom'
+import Button from '../../component/atom/Button'
 
 export default function Login() {
-  const [email,setEmail] = useState("")
-  const [password,setPassword] = useState("")
-  const [msg,setMsg] = useState("")
+  const [email,setEmail] = useState<string>("")
+  const [password,setPassword] = useState<string>("")
+  const [msg,setMsg] = useState<string>("")
   const {setUserInfo} = useContext(DataWrapper)
 const navigate = useNavigate() // for going to another page 
   
-  async function onLogIn(event){
+  async function onLogIn(event:React.MouseEvent<HTMLButtonElement>){
     event.preventDefault()
     try{
       const res = await fetch("http://localhost:8000/create/login",{
@@ -41,7 +41,7 @@ const navigate = useNavigate() // for going to another page
 
         <input type="email"  value={email} onChange={(e)=>setEmail(e.target.value)} className="outline-none border-1 shadow-md p-[10px] w-2/3 mx-auto rounded-md" placeholder='Enter email'/>
         <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} className="outline-none border-1 shadow-md p-[10px] w-2/3 mx-auto rounded-md" placeholder='Enterpassword'/>
-        <Button type='button' onClick={(e)=>onLogIn(e)} className="text-white bg-blue-500 w-[100px] h-auto py-2 px-2 rounded-lg shadow-md shadow-blue-500"> Log In</Button>
+        <Button type='button' onClick={(e:React.MouseEvent<HTMLButtonElement>)=>onLogIn(e)} className="text-white bg-blue-500 w-[100px] h-auto py-2 px-2 rounded-lg shadow-md shadow-blue-500"> Log In</Button>
         </form>
     </div>
   )
