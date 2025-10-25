@@ -35,7 +35,7 @@ export default function Sidebar() {
             </div>
             <div className="w-[240px] mx-auto px-4 flex items-center  hover:bg-[#21223F]   rounded-[10px]">
               <GoPeople className="h-6 w-6 text-[#D1D1DD]"/>
-            <Link className="flex text-left text-[#ADACCA] pl-4 py-3 w-full ">Customer</Link>
+            <Link className="flex text-left text-[#ADACCA] pl-4 py-3 w-full" to={""}>Customer</Link>
             </div>
           
           </nav>
@@ -44,12 +44,12 @@ export default function Sidebar() {
             <div className="w-[240px] mx-auto px-4 flex items-center  hover:bg-[#21223F]   rounded-[10px]">
               <CiLogin className="h-5 w-5 text-[#D1D1DD]"/>
 
-            <Link className="flex text-left text-[#ADACCA] pl-4 py-3 w-full ">Logout</Link>
+            <Link className="flex text-left text-[#ADACCA] pl-4 py-3 w-full" to={""}>Logout</Link>
             </div>
             <div className="w-[240px] mx-auto px-4 flex items-center  hover:bg-[#21223F]   rounded-[10px]">
               <IoSettingsOutline className="h-5 w-5 text-[#D1D1DD]"/>
 
-            <Link className="flex text-left text-[#ADACCA] pl-4 py-3 w-full ">Settings</Link>
+            <Link className="flex text-left text-[#ADACCA] pl-4 py-3 w-full" to={""}>Settings</Link>
             </div>
           </div>
         </div>
