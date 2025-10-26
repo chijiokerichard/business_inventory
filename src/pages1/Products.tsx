@@ -1,8 +1,4 @@
-// import { IoPeople } from "react-icons/io5";
-import { PiSealWarningFill } from "react-icons/pi";
-import { FaProductHunt } from "react-icons/fa6";
-import { MdPointOfSale } from "react-icons/md";
-import { IoAnalyticsSharp } from "react-icons/io5";
+
 
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -20,67 +16,26 @@ import { products_type } from "../component/type";
 
     
 export default function Products() {
-  const {products} = useContext(DataWrapper)
+  const {products,setIsNewProduct} = useContext(DataWrapper)
  
+  function showModal(){
+    setIsNewProduct((prev:boolean)=>!prev)
+  }
 
   return (
     <Wrapper>
+      {/* {isNewProduct && 
+      <div className="flex flex-col bg-amber-300 fixed z-[433333334444] items-center m-auto justify-center">
+        <NewProductModal/>
+      </div> 
+      } */}
       <div className="flex justify-between items-center">
 
         <h1 className="text-2xl font-[Bricolage_Grotesque]">Products</h1>
-        <button className="bg-[#0a0a2a] px-2 py-1 rounded-md text-white font-[Bricolage_Grotesque]">Create Product</button>
+        <button className="bg-[#0a0a2a] px-2 py-1 rounded-md text-white font-[Bricolage_Grotesque]" onClick={showModal}>Create Product</button>
       </div>
       <div style={{ marginTop: "1rem" }} className="mt-3 flex flex-col gap-5">
-        {/* <div className="flex gap-1 justify-between my-5 w-full">
-          <div className=" flex [#0a0a2a1] bg-[#F8FAF7] text- shadow-sm rounded-md w-[300px] h-[100px] px-2 py-1">
-            <div className="w-full font-[Bricolage_Grotesque] flex flex-col justify-between">
-              <div className="flex items-center gap-2 justify-start">
-                <PiSealWarningFill className="h-7 w-7 [#d3cbee99] bg-[#0a0a2a] p-1 text-white rounded-md " />
-
-                <span className="text-[15px] font-[200] font-[Bricolage_Grotesque] text-[#BCBEBB] ">About To Expire Products</span>
-              </div>
-              <div className="flex items-center justify-between w-full">
-                <p className="font-[600] text-[#3D3F3E] font-[Bitcount_Single] text-xl">10</p>
-                <div className="flex gap-0.5 items-center">
-
-                  <IoAnalyticsSharp className="h-5 w-5 text-[#8ca607]" /><span className="font-[Bitcount_Single] text-[#8ca607]">4%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className=" flex [#0a0a2a1] bg-[#F8FAF7] text- shadow-sm rounded-md w-[300px] h-[100px] px-2 py-1">
-            <div className="w-full font-[Bricolage_Grotesque] flex flex-col justify-between">
-              <div className="flex items-center gap-2 justify-start">
-                <MdPointOfSale className="h-7 w-7 [#d3cbee99] bg-[#0a0a2a] p-1 text-white rounded-md " />
-
-                <span className="text-[15px] font-[200] font-[Bricolage_Grotesque] text-[#BCBEBB] ">Today's Sales</span>
-              </div>
-              <div className="flex items-center justify-between w-full">
-                <p className="font-[600] text-[#3D3F3E] font-[Bitcount_Single] text-xl">$139.960</p>
-                <div className="flex gap-0.5 items-center">
-
-                  <IoAnalyticsSharp className="h-5 w-5 text-[#8ca607]" /><span className="font-[Bitcount_Single] text-[#8ca607]">4%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className=" flex [#0a0a2a1] bg-[#F8FAF7] text- shadow-sm rounded-md w-[300px] h-[100px] px-2 py-1">
-            <div className="w-full font-[Bricolage_Grotesque] flex flex-col justify-between">
-              <div className="flex items-center gap-2 justify-start">
-                <FaProductHunt className="h-7 w-7 [#d3cbee99] bg-[#0a0a2a] p-1 text-white rounded-md " />
-
-                <span className="text-[15px] font-[200] font-[Bricolage_Grotesque] text-[#BCBEBB] ">Total products Sold Today</span>
-              </div>
-              <div className="flex items-center justify-between w-full">
-                <p className="font-[600] text-[#3D3F3E] font-[Bitcount_Single] text-xl">1960</p>
-                <div className="flex gap-0.5 items-center">
-
-                  <IoAnalyticsSharp className="h-5 w-5 text-[#8ca607]" /><span className="font-[Bitcount_Single] text-[#8ca607]">7%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
+   
         <div>
         <div className="flex justify-between w-full flex-wrap gap-5">
  <div className="flex items-center gap-3">
@@ -101,19 +56,18 @@ export default function Products() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {products.map((row:products_type) => (
-                  <TableRow key={row.product_id} sx={{
+                {products?.products?.map((row:products_type) => (
+                  <TableRow key={row._id} sx={{
                     "&:last-child td, &:last-child th": { border: 0 }, "&:nth-of-type(odd)": {
                       backgroundColor: "#0a0a2a11",color:"white" // ✅ correct spelling
                     },
                   }}>
                     <TableCell component="th" scope="row">
-                      {row.product_name}
+                      {row?.name}
                     </TableCell>
-                    <TableCell align="center">{row.product_id}</TableCell>
-                    <TableCell align="center">${row.product_price}</TableCell>
+                    <TableCell align="center">{row?._id}</TableCell>
+                    <TableCell align="center">${row?.price}</TableCell>
                     <TableCell align="center">{row.stock}</TableCell>
-                    {/* <TableCell align="center">{row.paid_type}</TableCell> */}
                     <TableCell align="center">{row.pub_date}</TableCell>
                     <TableCell align="right">{row.expiring_date}</TableCell>
                   </TableRow>
