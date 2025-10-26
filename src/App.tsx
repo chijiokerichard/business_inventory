@@ -39,7 +39,7 @@ console.log(products)
       <DataWrapper.Provider value={{ products, setProducts, isNewProduct, setIsNewProduct,setMsg,msg }}>
 
         <div className='flex w-full flex-col '>
-            {msg && <p style={{marginTop:"10px"}} className='text-white fixed top-4  py-2 w-[300px] flex mt-5 justify-center items-center bg-green-500 z-[222222222222] text-[1rem] text-center rounded-md p-1'>{msg}</p>}
+            {msg && <p style={{marginTop:"10px"}} className='text-white fixed top-4  w-[300px] flex mt-5 justify-center items-center bg-green-500 z-[222222222222] text-[1rem] text-center rounded-md p-4'>{msg}</p>}
           
           <div className={`${isNewProduct?"fixed ":"hidden"} cursor-pointer left-0 bg-[#0000007a] right-0 z-10 top-0 bottom-0 flex items-center mx-auto justify-center`}>
             </div>
