@@ -1,9 +1,9 @@
 export type products_type = {
-    product_id: string,
-    product_name: string,
-    product_price: number,
-    category: number,
-    pub_date: number,
+    _id: any,
+    name: string,
+    price: string,
+    stock: number,
+    category: string,
+    pub_date: any,
     expiring_date?: string,
-    stock: string,
 }
