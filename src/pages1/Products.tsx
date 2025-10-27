@@ -32,7 +32,7 @@ export default function Products() {
       <div className="flex justify-between items-center">
 
         <h1 className="text-2xl font-[Bricolage_Grotesque]">Products</h1>
-        <button className="bg-[#0a0a2a] px-2 py-1 rounded-md text-white font-[Bricolage_Grotesque]" onClick={showModal}>Create Product</button>
+        {/* <button className="bg-[#0a0a2a] px-2 py-1 rounded-md text-white font-[Bricolage_Grotesque]" onClick={showModal}>Create Product</button> */}
       </div>
       <div style={{ marginTop: "1rem" }} className="mt-3 flex flex-col gap-5">
    

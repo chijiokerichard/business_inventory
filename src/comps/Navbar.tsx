@@ -8,7 +8,7 @@ import { GoBell } from "react-icons/go";
 
 export default function Navbar() {
   return (
-    <header className="flex  justify-between py-4 px-7 top-0  fixed ml-70 right-0   left-70 bg-white  items-center h-18">
+    <header className="flex  justify-between py-4 px-7 top-0  fixed left-70 right-0  bg-white  items-center h-18">
       <div className="flex  items-center w-full justify-between gap-10">
         <div className="flex items-center gap-3">
           <input type="text" className="w-[200px] font-[BitCount_Single] border-none p-1 outline-1 bg-white rounded-md border-[#0a0a2a]" name="" id="" />
