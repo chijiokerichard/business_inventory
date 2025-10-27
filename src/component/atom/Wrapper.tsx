@@ -1,12 +1,15 @@
 import React from 'react'
 
 type Props = {
-    children: React.ReactNode
+    children: React.ReactNode;
+    bg?:string;
+    top?:string;
+    height?:string
 }
 
-export default function Wrapper({children}: Props) {
+export default function Wrapper({children,bg,top,height}: Props) {
   return (
-    <div style={{marginLeft:"278px",marginTop:"73px",paddingBottom:"40px"}} className="bg-white  p-5  ml-[30px]  mt-18">
+    <div style={{marginLeft:"278px",marginTop:top?top:"73px",paddingBottom:"40px",backgroundColor:bg?bg:"white",height:height?height:"auto"}} className="p-5  ml-[30px]  mt-20">
         {children}
     </div>
   )

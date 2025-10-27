@@ -6,7 +6,12 @@ import { useEffect, useState } from 'react'
 import { DataWrapper } from '../context'
 import type { products_type } from './component/type'
 import Products from './pages1/Products'
-import NewProductModal from './comps/modal/NewProductModal'
+import AdminLayout from './src/admin/AdminLayout'
+import ProductsList from './src/products/ProductsList'
+import AddProduct from './src/products/AddProduct'
+import CategorysList from './src/category/CategoryList'
+import Admin from './src/admin/Admin'
+import AddCategory from './src/category/AddCategory'
 
 export default function App() {
   const [products, setProducts] = useState<products_type[]>([])
@@ -31,24 +36,29 @@ export default function App() {
     }
    
     fetchProduct()
-  }, [])
-console.log(products)
+  }, [products])
   
   return (
     <BrowserRouter>
       <DataWrapper.Provider value={{ products, setProducts, isNewProduct, setIsNewProduct,setMsg,msg }}>
 
         <div className='flex w-full flex-col '>
-            {msg && <p style={{marginTop:"10px"}} className='text-white fixed top-4  w-[300px] flex mt-5 justify-center items-center bg-green-500 z-[222222222222] text-[1rem] text-center rounded-md p-4'>{msg}</p>}
           
-          <div className={`${isNewProduct?"fixed ":"hidden"} cursor-pointer left-0 bg-[#0000007a] right-0 z-10 top-0 bottom-0 flex items-center mx-auto justify-center`}>
+          {/* <div className={`${isNewProduct?"fixed ":"hidden"} cursor-pointer left-0 bg-[#0000007a] right-0 z-10 top-0 bottom-0 flex items-center mx-auto justify-center`}>
             </div>
           {isNewProduct &&
             <div className="fixed left-0  right-0 z-10 top-0 bottom-0 flex items-center mx-auto justify-center">
               <NewProductModal />
             </div>
-          }
+          } */}
           <Routes>
+            <Route element={<AdminLayout/>}>
+              <Route path='/shop/admin/inventory' element={<Admin/>} />
+              <Route path='/shop/products' element={<ProductsList/>} />
+              <Route path='/shop/products/add' element={<AddProduct />} />
+              <Route path='/shop/categorys' element={<CategorysList />} />
+              <Route path='/shop/categorys/add' element={<AddCategory />} />
+            </Route>
             <Route element={<Layout />}>
               <Route path='/' element={<Dashboard />} />
               <Route path='/products' element={<Products />} />
